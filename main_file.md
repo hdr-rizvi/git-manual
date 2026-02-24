@@ -87,4 +87,17 @@ git rebase <source-branch>
 This command should be run while you are on the target branch (the branch you want to rebase onto). For example, if you want to rebase a feature branch called "feature-branch" onto the main branch, you would first switch to the feature branch using `git checkout feature-branch`, and then run `git rebase main`.
 After rebasing, you may need to resolve any conflicts that arise and then continue the rebase process using `git rebase --continue` until all commits have been applied successfully.
 
-test
+# git cherry-pick
+
+Git cherry-pick is a command used to apply a specific commit from one branch onto another branch. It allows you to select and apply individual commits without merging the entire branch. 
+
+When you cherry-pick a commit, Git takes the changes from that specific commit and applies them to the current branch. This can be useful when you want to apply a bug fix or a specific feature from one branch to another without merging all the changes from the source branch.
+To cherry-pick a commit, you can use the following command:
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+This command should be run while you are on the branch where you want to apply the commit. For example, if you want to apply a commit with the hash `abc123` from another branch to your current branch, you would run `git cherry-pick abc123`. After cherry-picking, you may need to resolve any conflicts that arise and then commit the changes to complete the process.
+
+# git stash
