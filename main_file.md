@@ -69,3 +69,21 @@ To merge a branch, you can use the following command:
 ```bash
 git merge <source-branch>
 ```
+This command should be run while you are on the target branch (the branch you want to merge into). For example, if you want to merge a feature branch called "feature-branch" into the main branch, you would first switch to the main branch using `git checkout main`, and then run `git merge feature-branch`.
+
+after merging, you may need to resolve any conflicts that arise and then commit the merge to complete the process.
+
+# git rebase
+
+Git rebase is a command used to integrate changes from one branch into another branch by moving or combining a sequence of commits. It allows you to maintain a cleaner commit history by applying the changes from one branch on top of another branch, rather than creating a new merge commit.
+
+When you rebase a branch, Git takes the commits from the source branch and reapplies them on top of the target branch. This can be useful for keeping a linear commit history and avoiding unnecessary merge commits. However, it can also lead to conflicts if there are changes in both branches that affect the same lines of code.
+To rebase a branch, you can use the following command:
+
+```bash
+git rebase <source-branch>
+```
+
+This command should be run while you are on the target branch (the branch you want to rebase onto). For example, if you want to rebase a feature branch called "feature-branch" onto the main branch, you would first switch to the feature branch using `git checkout feature-branch`, and then run `git rebase main`.
+After rebasing, you may need to resolve any conflicts that arise and then continue the rebase process using `git rebase --continue` until all commits have been applied successfully.
+
