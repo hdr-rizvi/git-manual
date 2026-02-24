@@ -56,3 +56,16 @@ To switch to a different branch, you can use the following command:
 ```bash
 git checkout <branch-name>
 ```
+
+
+
+# git merge
+
+Git merge is a command used to combine the changes from one branch into another branch. It allows you to integrate the changes made in a feature branch back into the main branch (or any other branch). 
+
+When you merge a branch, Git takes the commits from the source branch and applies them to the target branch. If there are no conflicts between the branches, Git will automatically merge the changes. However, if there are conflicting changes (i.e., changes made to the same lines of code in both branches), Git will prompt you to resolve the conflicts manually.
+To merge a branch, you can use the following command:
+
+```bash
+git merge <source-branch>
+```
