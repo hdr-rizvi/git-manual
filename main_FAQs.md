@@ -1,17 +1,6 @@
-# git FAQs
+# git FAQs 
 
-## Abbout branches and merging
-
-Q1: if bbranch-1 is already merge into main, can I merge branch-1 again to main?
-
-A1: No, once a branch has been merged into the main branch, you cannot merge it again. If you try to merge the same branch again, Git will recognize that there are no new commits to merge and will simply indicate that the branch is already up to date.
-
-Q2: If branch-1 is already merge into main, and I make some new commits on branch-1?
-
-A2: If you make new commits on branch-1 after it has been merged into main, you can merge branch-1 again to main. Git will recognize the new commits and merge them into the main branch. However, if there are any conflicts between the new commits and the existing code in main, you will need to resolve those conflicts before the merge can be completed. So branch-1 after commiting new changes be treated as a new branch and can be merged to main again.
-
-
-# About gitHub
+## Basic FAQs
 
 Q1: What is GitHub?
 
@@ -35,7 +24,44 @@ Q5: Is GitHub free to use?
 
 A5: Sort answer is yes, GitHub offers free accounts with unlimited public repositories. However, there are some limitations on private repositories for free accounts. Free accounts can have up to three collaborators on private repositories. 
 
-## setup githubb for local repository (from local git to github)
+
+## FAQs related to branches and merging.
+
+Following are short answers for not details are skipped.
+
+Q: if bbranch-1 is already merge into main, can I merge branch-1 again to main?
+
+A: No, once a branch has been merged into the main branch, you cannot merge it again. If you try to merge the same branch again, Git will recognize that there are no new commits to merge and will simply indicate that the branch is already up to date.
+
+Q: If branch-1 is already merge into main, and I make some new commits on branch-1?
+
+A: If you make new commits on branch-1 after it has been merged into main, you can merge branch-1 again to main. Git will recognize the new commits and merge them into the main branch. However, if there are any conflicts between the new commits and the existing code in main, you will need to resolve those conflicts before the merge can be completed. So branch-1 after commiting new changes be treated as a new branch and can be merged to main again.
+
+Q: Do branch still exist after merging to main?
+
+A: Yes, branches still exist after merging to main. Merging a branch into main does not delete the branch; it simply incorporates the changes from that branch into the main branch. The original branch will still be available in the repository, and you can continue to work on it or delete it if you no longer need it.
+
+Q: If branch is already merged to main, and I make some new commits on that branch, will it considered in mainbranch or separately only in that branch?
+
+A: If you make new commits on a branch that has already been merged to main, those new commits will not automatically be included in the main branch. The main branch will only contain the commits that were present at the time of the merge. The new commits will only exist in the branch where you made them until you merge that branch again into main. So, after making new commits on a branch that has already been merged, those commits will be considered separately and will not be part of the main branch until you merge it again.
+
+Q: If branch is already merged to main, and I make some new commits on that branch, can I merge it again to main?
+
+A: Yes, if you make new commits on a branch that has already been merged to main, you can merge it again to main. Git will recognize the new commits and merge them into the main branch. However, if there are any conflicts between the new commits and the existing code in main, you will need to resolve those conflicts before the merge can be completed. So, after making new commits on a branch that has already been merged, it can be treated as a new branch and can be merged to main again.
+
+Q: Forexample if I am working on the development of a code for numerical computation, is it batter to have a seprate baranch for runing the code for simulation and checking the results, or should i copy the main code to a seprate directory and run the code for simulation and checking the results?
+
+A: It is generally **better to have a separate branch for running the code for simulation and checking the results rather than copying the main code to a separate directory**. Using branches allows you to keep your work organized and maintain a clean history of changes. You can create a new branch specifically for testing and simulation, and any changes you make in that branch will not affect the main code until you decide to merge it back. This way, you can easily switch between branches, track changes, and collaborate with others without worrying about accidentally modifying the main code. Additionally, using branches allows you to take advantage of Git's features for managing changes and resolving conflicts if they arise during development.
+
+
+
+
+
+---
+
+# Setup GitHub 
+
+## for Local Repository (from Local Git to GitHub)
 
 To set up GitHub for a local repository, you can follow these steps:
 
@@ -59,9 +85,17 @@ To set up GitHub for a local repository, you can follow these steps:
 After completing these steps, your local repository will be connected to GitHub, and you can start collaborating with others by pushing and pulling changes to and from the remote repository.
 
 
-## Manual:
 
-### Initialize a new Git repository, add all files to staging, and check the status of the repository:
+
+
+---
+
+# Manual:
+
+## Important cmds:
+
+### Initialization of Git repository:
+Initialize a new Git repository, add all files to staging, and check the status of the repository:
 
 ```bash
 git init
@@ -69,7 +103,12 @@ git add .
 git status
 ```
 
-### setup github from local repository:
+
+## Setup GitHub 
+
+### from Local Repository:
+
+To set up GitHub for a local repository, you can follow these steps:
 
 ```bash
 git remote add origin <repository URL>
