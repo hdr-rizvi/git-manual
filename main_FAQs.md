@@ -1,4 +1,4 @@
-# git FAQs 
+# git FAQs
 
 ## Basic FAQs
 
@@ -16,16 +16,15 @@ Q3: What is a pull request on GitHub?
 
 A3: A pull request on GitHub is a way for developers to propose changes to a codebase. It allows them to submit their changes for review and discussion before they are merged into the main branch. When a developer creates a pull request, they can provide a description of the changes they have made and why they believe those changes should be merged. Other developers can then review the pull request, leave comments, and suggest improvements. Once the pull request has been reviewed and approved, it can be merged into the main branch, allowing the changes to become part of the codebase. Pull requests are an essential part of the collaborative workflow on GitHub and help ensure that code changes are thoroughly reviewed and tested before being integrated into the main codebase.
 
-Q4: What is the difference between Git and GitHub? 
+Q4: What is the difference between Git and GitHub?
 
 A4: Git is a distributed version control system that allows developers to track changes to their code and collaborate with others. It is a command-line tool that can be used locally on a developer's machine. GitHub, on the other hand, is a web-based platform that provides hosting for Git repositories. It offers additional features such as pull requests, issue tracking, and project management tools. While Git is the underlying technology for version control, GitHub provides a user-friendly interface and collaboration features that make it easier for developers to work together on projects. In summary, Git is the version control system, while GitHub is a platform that utilizes Git for hosting and collaboration.
 
 Q5: Is GitHub free to use?
 
-A5: Sort answer is yes, GitHub offers free accounts with unlimited public repositories. However, there are some limitations on private repositories for free accounts. Free accounts can have up to three collaborators on private repositories. 
+A5: Sort answer is yes, GitHub offers free accounts with unlimited public repositories. However, there are some limitations on private repositories for free accounts. Free accounts can have up to three collaborators on private repositories.
 
-
-## FAQs related to branches and merging.
+## FAQs related to branches and merging
 
 Following are short answers for not details are skipped.
 
@@ -59,7 +58,6 @@ A: In Git, `(HEAD -> main)` indicates that the current branch you are on is `mai
 
 `(origin/main, origin/HEAD)` indicates the state of the remote repository. `origin/main` is the main branch on the remote repository, and `origin/HEAD` is a symbolic reference to the default branch on the remote repository, which is usually `main`.
 
-
 ## FAQs related to tags:
 
 Q: What is a tag in Git?
@@ -69,27 +67,56 @@ A: A tag in Git is a reference to a specific point in the commit history. It is 
 Q: How do I create a tag in Git?
 
 A: You can create a tag in Git using the following command:
-```
+
+```bash
 git tag <tag name>
 ```
+
 Replace `<tag name>` with the name you want to give to your tag. For example, if you want to create a tag called `v1.0`, you would use the command:
-```
+
+```bash
 git tag v1.0
-```   
-This will create a tag named `v1.0` that points to the current commit. You can also specify a different commit by providing the commit hash after the tag name:
 ```
+
+This will create a tag named `v1.0` that points to the current commit. You can also specify a different commit by providing the commit hash after the tag name:
+
+```bash
 git tag <tag name> <commit hash>
 ```
+
 For example:
-```
+
+```bash
 git tag v1.0 abc123
 ```
+
 This will create a tag named `v1.0` that points to the commit with the hash `abc123`.
 
+Q: After adding tag in local repository, how to push it to GitHub?
 
+A: After creating a tag in your local Git repository, you can push it to GitHub using the following command:
+
+```bash
+git push origin <tag name>
+```
+
+Replace `<tag name>` with the name of the tag you want to push. For example, if you have a tag named `v1.0`, you would use the command:
+
+```bash
+git push origin v1.0
+```
+
+This will push the `v1.0` tag to the remote repository on GitHub. If you want to push all tags at once, you can use the following command:
+
+```bash
+git push --tags origin
+```
+
+This will push all tags from your local repository to the remote repository on GitHub. After pushing the tag(s), they will be available on GitHub, and you can reference them in your project or use them for releases and versioning.
 
 ---
-# Setup GitHub 
+
+# Setup GitHub
 
 ## for Local Repository (from Local Git to GitHub)
 
