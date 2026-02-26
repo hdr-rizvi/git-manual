@@ -60,7 +60,7 @@ A: In Git, `(HEAD -> main)` indicates that the current branch you are on is `mai
 `(origin/main, origin/HEAD)` indicates the state of the remote repository. `origin/main` is the main branch on the remote repository, and `origin/HEAD` is a symbolic reference to the default branch on the remote repository, which is usually `main`.
 
 
-# FAQs related to tags:
+## FAQs related to tags:
 
 Q: What is a tag in Git?
 
@@ -69,16 +69,20 @@ A: A tag in Git is a reference to a specific point in the commit history. It is 
 Q: How do I create a tag in Git?
 
 A: You can create a tag in Git using the following command:
-```git tag <tag name>
+```
+git tag <tag name>
 ```
 Replace `<tag name>` with the name you want to give to your tag. For example, if you want to create a tag called `v1.0`, you would use the command:
-```git tag v1.0
+```
+git tag v1.0
 ```   
 This will create a tag named `v1.0` that points to the current commit. You can also specify a different commit by providing the commit hash after the tag name:
-```git tag <tag name> <commit hash>
+```
+git tag <tag name> <commit hash>
 ```
 For example:
-```git tag v1.0 abc123
+```
+git tag v1.0 abc123
 ```
 This will create a tag named `v1.0` that points to the commit with the hash `abc123`.
 
