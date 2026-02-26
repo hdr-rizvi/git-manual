@@ -53,12 +53,38 @@ Q: Forexample if I am working on the development of a code for numerical computa
 
 A: It is generally **better to have a separate branch for running the code for simulation and checking the results rather than copying the main code to a separate directory**. Using branches allows you to keep your work organized and maintain a clean history of changes. You can create a new branch specifically for testing and simulation, and any changes you make in that branch will not affect the main code until you decide to merge it back. This way, you can easily switch between branches, track changes, and collaborate with others without worrying about accidentally modifying the main code. Additionally, using branches allows you to take advantage of Git's features for managing changes and resolving conflicts if they arise during development.
 
+Q: What is difference between `(HEAD -> main)`, `(origin/main, origin/HEAD)`
 
+A: In Git, `(HEAD -> main)` indicates that the current branch you are on is `main`, and `HEAD` is pointing to it. This means that any new commits you make will be added to the `main` branch.
+
+`(origin/main, origin/HEAD)` indicates the state of the remote repository. `origin/main` is the main branch on the remote repository, and `origin/HEAD` is a symbolic reference to the default branch on the remote repository, which is usually `main`.
+
+
+# FAQs related to tags:
+
+Q: What is a tag in Git?
+
+A: A tag in Git is a reference to a specific point in the commit history. It is often used to mark important milestones, such as releases or versions of a project. Tags are similar to branches, but they do not change over time. Once a tag is created, it points to a specific commit and does not move, even if new commits are added to the repository. This makes tags useful for marking specific versions of code that you want to reference later.
+
+Q: How do I create a tag in Git?
+
+A: You can create a tag in Git using the following command:
+```git tag <tag name>
+```
+Replace `<tag name>` with the name you want to give to your tag. For example, if you want to create a tag called `v1.0`, you would use the command:
+```git tag v1.0
+```   
+This will create a tag named `v1.0` that points to the current commit. You can also specify a different commit by providing the commit hash after the tag name:
+```git tag <tag name> <commit hash>
+```
+For example:
+```git tag v1.0 abc123
+```
+This will create a tag named `v1.0` that points to the commit with the hash `abc123`.
 
 
 
 ---
-
 # Setup GitHub 
 
 ## for Local Repository (from Local Git to GitHub)
