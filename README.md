@@ -1,6 +1,8 @@
 
 To continuously updating your code and want to keep one **stable checked version** plus another **actively developing version**, the best practice is to use a proper **branching strategy** in GitHub.
 
+For detailed cheat sheet of Git commands, see [**Git Cheat Sheet**](./cheat-sheet.md). 
+
 Here’s a clean and professional workflow 👇
 
 ---
