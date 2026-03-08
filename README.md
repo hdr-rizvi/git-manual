@@ -1,4 +1,5 @@
-If you’re continuously updating your code and want to keep one **stable checked version** plus another **actively developing version**, the best practice is to use a proper **branching strategy** in GitHub.
+
+To continuously updating your code and want to keep one **stable checked version** plus another **actively developing version**, the best practice is to use a proper **branching strategy** in GitHub.
 
 Here’s a clean and professional workflow 👇
 
