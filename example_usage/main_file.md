@@ -107,3 +107,12 @@ This command should be run while you are on the branch where you want to apply t
 # comme commments
 
 > this line is added in baranch-3
+
+# 🧑‍🔬 Git Workflow for Scientific Computing Projects
+
+In scientific computing projects, it's crucial to maintain a stable main branch while allowing for active development. Here's a simple workflow that balances stability and flexibility:
+
+
+
+
+

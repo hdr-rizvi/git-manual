@@ -134,7 +134,3 @@ If you tell me:
 
 I can suggest a workflow optimized for scientific computing projects.
 
-----
-ok 2
-ok 3
-ok 4
