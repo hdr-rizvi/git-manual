@@ -200,3 +200,12 @@ Here is a compact version of my Git cheat sheet:
 - Use `git <command> --reset-author --amend --no-allow-empty-message` to reset the author information for the most recent commit and prevent creating a commit with an empty commit message
 - Use `git <command> --reset-author --amend --no-allow-empty --no-allow-empty-message` to reset the author information for the most recent commit and prevent creating an empty commit or a commit with an empty commit message 
 
+
+## Example Tag and Release
+### tag
+```bash
+git checkout main
+git tag v3.0.0
+git push origin v3.0.0
+```
+
