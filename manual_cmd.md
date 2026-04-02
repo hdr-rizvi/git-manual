@@ -123,11 +123,40 @@ No need to overcomplicate.
 
 ---
 
-If you tell me:
 
-* Is this research code?
-* Is it simulation-heavy?
-* Do others collaborate with you?
+# FAQs
 
-I can suggest a workflow optimized for scientific computing projects.
+## Q-1. To revert to back to current commit and delete all new changes.
 
+### Method-1
+
+```bash
+git status
+
+# To undo all edits in a file
+git checkout -- <file>
+
+# To undo all edits in current dir
+git checkout -- .
+
+
+# Remove new untracked files 
+## dry run to see what would be deleted without actually deleting it.
+git clean -n
+## To delete untrack files and dir
+git clean -fd
+
+```
+
+### Method-2
+
+To discard local changes to all files, permanently:
+
+```bash
+# Wipe everything at once (Tracked+staged)
+git reset --hard
+```
+
+
+For detals
+https://docs.gitlab.com/topics/git/undo/

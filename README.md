@@ -125,12 +125,3 @@ dev   (work here daily)
 No need to overcomplicate.
 
 ---
-
-If you tell me:
-
-* Is this research code?
-* Is it simulation-heavy?
-* Do others collaborate with you?
-
-I can suggest a workflow optimized for scientific computing projects.
-
