@@ -157,6 +157,44 @@ To discard local changes to all files, permanently:
 git reset --hard
 ```
 
-
 For detals
+
 https://docs.gitlab.com/topics/git/undo/
+
+
+
+## Q-2. DS_Store 
+
+to manually remove the `.DS_Store` files that were added to your repository.
+
+```bash
+git rm --cached .DS_Store
+
+```
+
+Once removed, git should ignore it. You should only need the following line in your root `.gitignore` file: `.DS_Store`. Don't forget the period!
+
+```bash
+git rm --cached .DS_Store
+```
+
+removes only `.DS_Store` from the current directory. You can use
+
+```bash
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+```
+to remove all .DS_Stores from the repository.
+
+
+
+**Felt tip**: Since you probably never want to include .DS_Store files, make a global rule. First, make a global .gitignore file somewhere, e.g.
+
+```bash
+echo .DS_Store >> ~/.gitignore_global
+```
+
+Now tell git to use it for all repositories:
+
+```bash
+git config --global core.excludesfile ~/.gitignore_global
+```
